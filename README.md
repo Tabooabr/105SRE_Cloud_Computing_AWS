@@ -157,8 +157,8 @@ We need to ensure that the app is available 24/7.
 5. add security groups:
     - make sure to restrict access in SSH selecting proper port
     - allow access to vm through HTTP
-6. Launch and connect following the instructions from:
-![image](https://user-images.githubusercontent.com/34945430/159480658-ee3f2edf-e3c7-4854-88b5-ceb826fe226e.png)
+6. Launch and connect following the instructions from
+AWS
 (some steps may need clarification)
 ---
 
