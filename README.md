@@ -146,62 +146,7 @@ We need to ensure that the app is available 24/7.
 
 ## AWS Diagram:
 
-Public Cloud
 
-	- Secure it
-	- Security Groups
-	- AWS file.pem
-	- SSH command provided to us by
-	Aws
-	- 
-
-Elastic compute Service
-
-Credentials ?
-
-Allow port 22
-Only locally
-
-Ec2 - Virtual Machine
-
-Laptop/desktop:
-	- MB
-	- Cpu
-	- Gpu
-	- HDD
-	- Ram
-	- Audio
-	- OS
-
-AWS IAM role
-	-U - pw AWS keys
-
-Ireland - img available here
-
-http://34.240.14.209/
-
-Works on port 80 by default.
-
-
-
-Local Host
-
-AMI - Amazon Machine Image
-
-File.pem
-.ssh folder
-
-
-It will take a snapshot and save it in the same region (island)
-Why? Because it applies version control  (so we can recover changes and
-Snapshots)
-
-O
-
-~ to
-
-22 March 2022
-10:19
 ![image](https://user-images.githubusercontent.com/34945430/159507487-54f1dedb-e809-4686-a3a8-709afb316145.png)
 
 
@@ -214,6 +159,7 @@ O
 5. add security groups:
     - make sure to restrict access in SSH selecting proper port
     - allow access to vm through HTTP
+    - and set ssh as private
 6. Launch and connect following the instructions from
 AWS
 
