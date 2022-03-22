@@ -148,7 +148,19 @@ We need to ensure that the app is available 24/7.
 
 ![image](https://user-images.githubusercontent.com/34945430/159462791-8d14998a-e95c-41e0-b9bd-c87ecab7d42f.png)
 
+### How to connect to remote VM: ###
 
+1. put the SSH key into your .ssh folder (C/users/username/.ssh)
+2. In AWS Select EC2
+3. Create a new instance (in this case ubuntu v 18.04)
+4. add a name
+5. add security groups:
+    - make sure to restrict access in SSH selecting proper port
+    - allow access to vm through HTTP
+6. Launch and connect following the instructions from:
+![image](https://user-images.githubusercontent.com/34945430/159480658-ee3f2edf-e3c7-4854-88b5-ceb826fe226e.png)
+(some steps may need clarification)
+---
 
   
 
