@@ -159,8 +159,16 @@ We need to ensure that the app is available 24/7.
     - allow access to vm through HTTP
 6. Launch and connect following the instructions from
 AWS
+
+7. **Remember to stop the instance when not using the vm through the AWS website** 
 (some steps may need clarification)
 ---
+### Inside the VM ##
+
+1. Run: sudo apt-get update -y
+2. run: sudo apt-get upgrade -y
+3. run: sudo apt-get install nginx -y
+4. Check that it was installed sucessfully through checking the public IP
 
   
 
