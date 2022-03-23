@@ -209,5 +209,8 @@ How to check status of nginx or anything:
 
 - how to copy a file `copy file.txt form current location to sre folder`
 
-- move a file: `mv /current_location_Path/target_file   /Destination_path/`
+- move a file: `mv /current_location_of_the_file_you_want_to_copy/target_file   /Destination_where_you_want_to_move_that_file_to/`
+    or `sudo mv filename ~/filenamenew`
 - how to move back `cd -` or `cd ..`
+- how to delete folder `sudo rm -rf folder_name` *(Dangerous, doesn't ask if sure to remove)*
+
