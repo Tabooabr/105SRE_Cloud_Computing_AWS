@@ -321,4 +321,8 @@ https://devops4solutions.com/installation-of-tomcat-on-aws-ec2-linux-integration
 Kill processID
 SigKill ProcessID / Kill-9 ProcessID
 ```
+Illustration:
+
+![image](https://user-images.githubusercontent.com/34945430/159765083-275793cc-3a9a-44e9-9416-f08f0688a16d.png)
+
 ---
