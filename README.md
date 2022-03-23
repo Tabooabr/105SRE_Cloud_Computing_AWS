@@ -278,6 +278,8 @@ https://devops4solutions.com/installation-of-tomcat-on-aws-ec2-linux-integration
 
 ## Questions and R+D ##
 
+![image](https://user-images.githubusercontent.com/34945430/159764195-148f2220-8687-4749-85bd-1ef5ea415331.png)
+
 ### - What is a VPC ###
 -   Virtual Private Cloud
 -   A virtual Network dedicated to your account on the service
@@ -319,3 +321,4 @@ https://devops4solutions.com/installation-of-tomcat-on-aws-ec2-linux-integration
 Kill processID
 SigKill ProcessID / Kill-9 ProcessID
 ```
+---
