@@ -174,10 +174,19 @@ AWS
 4. Check that it was installed sucessfully through checking the public IP
 
 How to check status of nginx or anything:
+How to check a given service:
 
-systemctl status nginx
+`systemctl status nginx`
 
-  
+How to start a service:
 
+`sudo systemctl start nginx`
+
+How to stop a process:
+
+`sudo systemctl stop nginx`
+
+
+*Note: "sudo" gives you admin priviledges when running a command*
 
 
