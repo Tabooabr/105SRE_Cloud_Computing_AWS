@@ -166,11 +166,13 @@ AWS
 7. **Remember to stop the instance when not using the vm through the AWS website** 
 (some steps may need clarification)
 ---
+Cheatsheet: https://www.guru99.com/linux-commands-cheat-sheet.html
+
 ### Inside the VM ##
 
-1. Run: sudo apt-get update -y
-2. run: sudo apt-get upgrade -y
-3. run: sudo apt-get install nginx -y
+1. Run: `sudo apt-get update -y`
+2. run: `sudo apt-get upgrade -y`
+3. run: `sudo apt-get install nginx -y`
 4. Check that it was installed sucessfully through checking the public IP
 
 How to check status of nginx or anything:
@@ -213,4 +215,14 @@ How to check status of nginx or anything:
     or `sudo mv filename ~/filenamenew`
 - how to move back `cd -` or `cd ..`
 - how to delete folder `sudo rm -rf folder_name` *(Dangerous, doesn't ask if sure to remove)*
+
+### File Permisions: ###
+
+- How to check a file permision `ll`
+- Change file permission `chmod required_permision file_name`
+- Write `w` read `r` exec `x`
+- https://chmod-calculator.com
+
+
+
 
