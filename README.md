@@ -173,6 +173,10 @@ AWS
 3. run: sudo apt-get install nginx -y
 4. Check that it was installed sucessfully through checking the public IP
 
+How to check status of nginx or anything:
+
+systemctl status nginx
+
   
 
 
