@@ -274,3 +274,48 @@ then add :8080 to the http
 Also this was useful:
 https://devops4solutions.com/installation-of-tomcat-on-aws-ec2-linux-integration-with-jenkins/
 
+--- 
+
+## Questions and R+D ##
+
+### - What is a VPC ###
+-   Virtual Private Cloud
+-   A virtual Network dedicated to your account on the service
+-   Private instance that is secure and Isolated within a Public Cloud
+-   Stores Data
+-   Run Code
+-   Host Websites
+### - What is an Internet Gateway ###
+- A horizontally Scaled, Redudntant and highly available VPC component
+- Allows Communications between VPC and Interent
+- Enables the resources like EC2 Instances to connect to the internet if they have a public IPV4 or 6 Address
+- Provide a target in your VPC Route Tables for traffic routing
+- Perform Network Address Translation for instances for traffic routing
+### - What is Route Tables ###
+- A set of rules called routes that determine where network traffic from your subnet or Gateway is directed
+- local route for communication within the VPC
+### - What is a subnet ###
+- a range of IP adresses in your VPC
+- Dividing the network into two or more networks
+- Public and Private Subnet exist
+### - What is NACLS ###
+- Network Access Control List
+- Optional Security layer
+- Acts as a Firewall for controlling traffic in and out of one or more subnets
+### - What is a Security Group ###
+- A virtual firewall that controls traffic
+- Decides what traffic leaves and reaches the resources it is associated with
+- EG Ec2 instance where our security group we added 8080 to allow Tomcat to access
+### - How did you secure your app on the public cloud ###
+- By using security groups and allowing only Heavily used and necessary ports   
+- Tomcat: 8080
+- We restrict traffic allowing to enter or exit different adresses within our app
+### - What are the outbound rules for security group by default and why? ###
+- Default is all inbout traffic from resources that are assigned to the same security group
+- Allows all outbound IPV4 traffic
+- Allows IPV6 traffic if vpc has an associated ipv6 Block
+### - What is the command to kill a process in Linux? ###
+```bash
+Kill processID
+SigKill ProcessID / Kill-9 ProcessID
+```
