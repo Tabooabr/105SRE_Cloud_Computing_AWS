@@ -269,5 +269,8 @@ sudo systemctl start nginx
   # allow traffic to port 8080
   sudo ufw allow from any to any port 8080 proto tcp
 ```
-Also add 8080 to the address
+Also add 8080 to the Security groups
+then add :8080 to the http
+Also this was useful:
+https://devops4solutions.com/installation-of-tomcat-on-aws-ec2-linux-integration-with-jenkins/
 
