@@ -224,5 +224,33 @@ How to check status of nginx or anything:
 - https://chmod-calculator.com
 
 
+### Bash Scripting - Automate process with the script ###
 
+- code block
+```bash
+#!/bin/bash
+
+# run update
+
+sudo apt-get update -y
+
+# run upgrades
+
+sudo apt-get upgrade -y
+
+# install nginx
+
+sudo apt get install nginx -y
+
+# Ensure it's running - start nginx
+
+sudo systemctl start nginx
+
+# Enable ngin
+
+
+```
+
+- Change the file to exe file `sudo chmod +x provision.sh`
+- How to run an exe file `./provision.sh`
 
