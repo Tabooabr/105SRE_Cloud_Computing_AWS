@@ -174,19 +174,40 @@ AWS
 4. Check that it was installed sucessfully through checking the public IP
 
 How to check status of nginx or anything:
-How to check a given service:
-
-`systemctl status nginx`
-
-How to start a service:
-
-`sudo systemctl start nginx`
-
-How to stop a process:
-
-`sudo systemctl stop nginx`
-
 
 *Note: "sudo" gives you admin priviledges when running a command*
 
+- How to check a given service:
 
+`systemctl status name_service`
+
+- How to start a service:
+
+`sudo systemctl start name_service`
+
+- How to stop a process:
+
+`sudo systemctl stop name_service`
+
+- How to enable service:
+ `sudo systemctl enable service_name`
+
+- How to install a package:
+
+    `sudo apt-get install package_name -y`
+    
+    `sudo apt install package_name -y` *(also works for newer V)*
+
+- How to remove a package:`sudo apt remove package_name -y` 
+- How to check all processes: `top`
+- Who am I `uname` or `uname -a` 
+- Where am I `pwd` 
+- Create a directory: `mkdir dir_name`
+- How to check dir `ls` or `ls -a`
+- How to create a file `touch name_file` or `nano file_name` 
+- How to check content of the file without going inside of the file: `cat file_name`
+
+- how to copy a file `copy file.txt form current location to sre folder`
+
+- move a file: `mv /current_location_Path/target_file   /Destination_path/`
+- how to move back `cd -` or `cd ..`
