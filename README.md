@@ -330,14 +330,26 @@ Illustration:
 ### Monolith - N-tier - 2-tier & Microservices Architecture ###
 
 #### Monolith ####
-
-schools and smaller business that know they wont scale
+- One big service
+- Simple but has limitations and complexity
+- Heavy apps can slow down the startup tim
+- Each update results into redeploying the full stack app
+- Challenging to scale up
+- Perfect for small services that don't require scaling
+- Schools and smaller business that know they wont scale
 
 #### N-tier ####
+- An N-tier architecture divides an application into logical layers and physical tiers.
+- Layers are a way to separate responsibilities and manage dependencies.
+- Each layer has a specific responsibility.
+- A higher layer can use services in a lower layer, but not the other way around.
+![image](https://user-images.githubusercontent.com/34945430/159960917-bf7c2a36-2c69-41f7-9fd6-71dda4759fae.png)
 
 #### 2-tier ####
-
+- A two-tier architecture is a software architecture in which a presentation layer or interface runs on a client, and a data layer or data structure gets stored on a server.
+- Separating these two components into different locations represents a two-tier architecture, as opposed to a single-tier architecture.
 #### Microservices Architecture ####
+![image](https://user-images.githubusercontent.com/34945430/159960853-039d5e1a-ea70-4962-a500-e47d6187d9e4.png)
 
 for example: Netflix and banks, whos business needs depend on having an available app 24/7. or that know their service will scale up inmensely.
 
@@ -375,4 +387,32 @@ Jenkins Circleci, teamcitym, bamboo, gitlab
 
 Jenkins:
 ![image](https://user-images.githubusercontent.com/34945430/159911158-b1e755e2-944e-4a3d-8720-1357beae32f2.png)
+
+---
+Business and production
+SDLC – software development life cycle
+It’s the process of end to end product development.
+Products need to follow a certain life cycle.
+The Stages are:
+•    Planning
+Just an idea, only in someone’s head
+•    Designing
+Writing out how the product will look and what it needs.
+•    Development
+Develop an environment that works for all of us. i.e the linux instance we created
+Implementing the design.
+•    Testing
+Nothing goes to production without testing.
+The test must pass in order to go to the next stage.
+Beta versions can happen after testing to get feedback from the user.
+•    Staging
+It’s the holding area before the code gets deployed. The program is packaged and ready, just on hold till the release date. After staging the code is deployed.
+
+
+
+Github
+-    One person reviewing is always the best.
+-    Someone who is more knowledgeable should merge.
+-    Git enter will tell you all the commands that can be performed on git
+-    If you delete the .git file you need to reconnect to the github remote before pushing the code back to github.
 
