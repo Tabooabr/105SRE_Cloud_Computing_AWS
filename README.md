@@ -326,3 +326,53 @@ Illustration:
 ![image](https://user-images.githubusercontent.com/34945430/159765083-275793cc-3a9a-44e9-9416-f08f0688a16d.png)
 
 ---
+
+### Monolith - N-tier - 2-tier & Microservices Architecture ###
+
+#### Monolith ####
+
+schools and smaller business that know they wont scale
+
+#### N-tier ####
+
+#### 2-tier ####
+
+#### Microservices Architecture ####
+
+for example: Netflix and banks, whos business needs depend on having an available app 24/7. or that know their service will scale up inmensely.
+
+#### Scaling up and scaling out? ####
+
+caling up is increasing the size of the database (pisical)
+where scaling out is used to allow more traffic.
+
+---
+
+https://medium.com/@ahshahkhan/devops-culture-and-cicd-3761cfc62450
+
+What is Docker? 
+
+- Its a virtualization platform to containerise your app, it enables to build a container image and use it across the development process.
+- Allows you to split non dependent steps and run them in parallel.
+- run apps in containers instead of VMs is becoming popular.
+
+CI CD?
+- Continous integration and continous delivery and deployment. (Pipeline)
+-its the backbone  of the devops Practices and Automation.
+
+CI: 
+- Developers merge/commit code to master branch multiple times a day, fully automated build and test process which gives feedback within few minutes.
+
+CD:
+-is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button.
+
+CI CD:
+
+![image](https://user-images.githubusercontent.com/34945430/159910966-8a296c1f-8947-4048-b9ac-0e73870daa85.png)
+
+Best tools to build CICD pipeline?
+Jenkins Circleci, teamcitym, bamboo, gitlab
+
+Jenkins:
+![image](https://user-images.githubusercontent.com/34945430/159911158-b1e755e2-944e-4a3d-8720-1357beae32f2.png)
+
