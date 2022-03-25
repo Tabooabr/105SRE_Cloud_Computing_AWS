@@ -437,7 +437,7 @@ Github
 **How to upload to S3:**
 
 5. (make any file)
-6. aws s3 cp test.txt s3://105-sre-aaron (aws service name-of-file path)
+6. `aws s3 cp test.txt s3://105-sre-aaron` (aws service name-of-file path)
 
 **Download data from s3:**
 
