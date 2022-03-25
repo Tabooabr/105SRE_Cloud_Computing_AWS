@@ -416,3 +416,36 @@ Github
 -    Git enter will tell you all the commands that can be performed on git
 -    If you delete the .git file you need to reconnect to the github remote before pushing the code back to github.
 
+---
+
+<h3> S3 </h3>
+
+- What is it:
+
+- Amazon S3 or Amazon Simple Storage Service is a service offered by Amazon Web Services that provides object storage through a web service interface. Amazon S3 uses the same scalable storage infrastructure that Amazon.com uses to run its global e-commerce network.
+- Simple storage service
+- used in data backup, Disaster recovery plan (DR)
+- S3 Classes
+
+#### AWS CLI ####
+
+1. `aws configure`
+2. (input id keys region format)
+3. `aws s3 ls` (using aws go to s3 and do this command
+4. `aws s3 mb s3://105-sre-aaron` (how to make a folder)
+
+**How to upload to S3:**
+
+5. (make any file)
+6. aws s3 cp test.txt s3://105-sre-aaron (aws service name-of-file path)
+
+**Download data from s3:**
+
+`aws s3 cp s3://105-sre-aaron/test.txt ~/`
+
+**Delete bucket and text file**
+`aws s3 rb s3://105-sre-aaron`
+(rememebr to delete whats inside with `rm`)
+
+
+
