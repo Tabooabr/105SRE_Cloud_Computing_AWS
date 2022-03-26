@@ -460,3 +460,7 @@ command to acces the SQL server: `sqlcmd -S localhost -U SA -P 'password'`
 ---
 
 ### Deploying the api: ##
+
+New instance for the API firs of all compress the file put it in the ssh folder and then send it to the instance with this:
+
+`scp -i "105.pem" Apizip.zip ubuntu@ec2-x-xxx-xxx-xxx.eu-west-1.compute.amazonaws.com:~/api.zip`
