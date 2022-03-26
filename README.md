@@ -447,5 +447,16 @@ Github
 `aws s3 rb s3://105-sre-aaron`
 (rememebr to delete whats inside with `rm`)
 
+--- 
 
+### Following this tutorial to setup northwind in a db ###
 
+https://www.youtube.com/watch?v=bzOljuaYeUk
+
+Changes from the video: 
+1. use the EC2 Public ip when connecting through Microsoft Server SQL tools.
+command to acces the SQL server: `sqlcmd -S localhost -U SA -P 'password'`
+
+---
+
+### Deploying the api: ##
