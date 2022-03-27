@@ -558,7 +558,7 @@ Then follow this:
 
 https://github.com/mahedee/Articles/blob/master/dot-net-core/HowToHostASP.NETCoreWebAPIwithMSSQLServerOnLinuxWithNginxFromScratch.md
 
-Step 7 onwards.
+Step 7 & 9.
 
 Then test the connection through the website and it should all run:
 
