@@ -463,10 +463,15 @@ After installing MSSQL Server and being able to access it,
 
 (change localhost, add ID, and password to the connection strings)
 Inside the Json Config:
+
 ![string connection](https://user-images.githubusercontent.com/34945430/160294224-14dad5e2-e9f9-4813-ac9d-7e1dac54da02.png)
+
 Inside Program:
+
 ![image](https://user-images.githubusercontent.com/34945430/160294244-d54666c3-9334-44e2-a4b2-ba1e0ec70374.png)
+
 Inside the product context:
+
 ![image](https://user-images.githubusercontent.com/34945430/160294271-dc4e978b-7400-4e78-9986-42c95673c974.png)
 
 3. Package the Api to Ubuntu with this command: `dotnet publish -c release -r ubuntu.18.04-x64`
@@ -494,9 +499,8 @@ next testing local connection:
 
 EG:
 
-```bash
-{"productId":1,"productName":"Chai","quantityPerUnit":"10 boxes x 20 bags","unitPrice":18.0000,"unitsInStock":39,"unitsOnOrder":0,"reorderLevel":10,"discontinued":false,"productsHtmlLinks":["/api/products/1","/api/products/price-higher/{price}","/api/products/price-lower/{price}","/api/products/starts-with/{str}","/api/products/sorted-by-suppliers","/api/products/sorted-by-categories"],"category":"Beverages","categoryLink":"/api/categories/1","supplier":"Exotic Liquids","supplierLink":"/api/suppliers/1"}
-```
+![image](https://user-images.githubusercontent.com/34945430/160295408-2bf24334-2b19-407e-b35f-781ad91c3725.png)
+
 If you can retrieve information then continue with port forwarding:
 
 ## Port Forwarding ##
