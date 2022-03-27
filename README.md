@@ -449,7 +449,14 @@ Github
 
 --- 
 
-### Following this tutorial to setup northwind in a db ###
+# Following this tutorial to setup northwind in a db #
+
+## This Diagram summarizes the end result: ##
+
+![image](https://user-images.githubusercontent.com/34945430/160295820-98b969ef-8159-4208-8114-725241d29592.png)
+
+
+Start installing MSSQL server following this tutorial:
 
 https://www.youtube.com/watch?v=bzOljuaYeUk
 
