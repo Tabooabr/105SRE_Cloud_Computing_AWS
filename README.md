@@ -457,19 +457,103 @@ Changes from the video:
 1. use the EC2 Public ip when connecting through Microsoft Server SQL tools.
 command to acces the SQL server: `sqlcmd -S localhost -U SA -P 'password'`
 
----
+After installing MSSQL Server and being able to access it, 
+
+2. it is required to change the connection strings inside the app:
+
+(change localhost, add ID, and password to the connection strings)
+Inside the Json Config:
+![string connection](https://user-images.githubusercontent.com/34945430/160294224-14dad5e2-e9f9-4813-ac9d-7e1dac54da02.png)
+Inside Program:
+![image](https://user-images.githubusercontent.com/34945430/160294244-d54666c3-9334-44e2-a4b2-ba1e0ec70374.png)
+Inside the product context:
+![image](https://user-images.githubusercontent.com/34945430/160294271-dc4e978b-7400-4e78-9986-42c95673c974.png)
+
+3. Package the Api to Ubuntu with this command: `dotnet publish -c release -r ubuntu.18.04-x64`
+3.1  zip it, paste it into the .ssh folder.
 
 ### Deploying the api: ##
 
-New instance for the API firs of all compress the file put it in the ssh folder and then send it to the instance with this:
+1. Launch a new instance for the API (Has to be in the local machine) and then send it to the instance with this:
 
 `scp -i "105.pem" Apizip.zip ubuntu@ec2-x-xxx-xxx-xxx.eu-west-1.compute.amazonaws.com:~/api.zip`
 
-## publish in VS to ubuntu ##
+2. SSH into the remote machine 
+3. Install unzip `sudo apt install zip`
+4. Unzip the api file: `sudo unzip api.zip`
+5. Cd Into the ubuntu files, then find the api file and change its permissions to be executable
+`sudo chmod 777 ProductsApi` (tabbing helps)
+6. Run the new executable with `./ProductsApi`
 
-dotnet publish -c release -r ubuntu.18.04-x64
+next testing local connection:
 
 ## To test connection ##
 
- curl localhost:5000/api/Employees/1
+ `curl localhost:5000/api/Employees/1`
+ You should retrieve information if you change the information correctly:
+
+EG:
+
+```bash
+{"productId":1,"productName":"Chai","quantityPerUnit":"10 boxes x 20 bags","unitPrice":18.0000,"unitsInStock":39,"unitsOnOrder":0,"reorderLevel":10,"discontinued":false,"productsHtmlLinks":["/api/products/1","/api/products/price-higher/{price}","/api/products/price-lower/{price}","/api/products/starts-with/{str}","/api/products/sorted-by-suppliers","/api/products/sorted-by-categories"],"category":"Beverages","categoryLink":"/api/categories/1","supplier":"Exotic Liquids","supplierLink":"/api/suppliers/1"}
+```
+If you can retrieve information then continue with port forwarding:
+
+## Port Forwarding ##
+
+1. Install Nginx
+
+Original link: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-6.0
+
+Use `apt-get` to install Nginx. The installer creates a systemd init script that runs Nginx as daemon on system startup. Follow the installation instructions for Ubuntu at Nginx: Official Debian/Ubuntu packages.
+
+ Note
+
+If optional Nginx modules are required, building Nginx from source might be required.
+
+Since Nginx was installed for the first time, explicitly start it by running:
+
+```Bash
+
+
+sudo service nginx start
+```
+Verify a browser displays the default landing page for Nginx. The landing page is reachable at http://<server_IP_address>/index.nginx-debian.html.
+
+2. Configure Nginx
+To configure Nginx as a reverse proxy to forward HTTP requests to your ASP.NET Core app, modify `/etc/nginx/sites-available/default.` Open it in a text editor, and replace the contents with the following snippet:
+
+
+```bash
+server {
+    listen        80;
+    server_name   example.com *.example.com;
+    location / {
+        proxy_pass         http://127.0.0.1:5000;
+        proxy_http_version 1.1;
+        proxy_set_header   Upgrade $http_upgrade;
+        proxy_set_header   Connection keep-alive;
+        proxy_set_header   Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+![image](https://user-images.githubusercontent.com/34945430/160295051-ec4dc5dd-98ac-4eec-8a30-8ff452cca0d1.png)
+
+Then follow this:
+
+https://github.com/mahedee/Articles/blob/master/dot-net-core/HowToHostASP.NETCoreWebAPIwithMSSQLServerOnLinuxWithNginxFromScratch.md
+
+Step 7 onwards.
+
+Then test the connection through the website and it should all run:
+
+## Now that it is working: ##
+
+SSH into the app and run the ./ProductsApi 
+Test any ends:
+![image](https://user-images.githubusercontent.com/34945430/160295269-615c080a-4e8a-4e53-bfae-31d87b0469e0.png)
 
