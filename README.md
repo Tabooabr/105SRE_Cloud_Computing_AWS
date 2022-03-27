@@ -554,7 +554,7 @@ server {
 
 ![image](https://user-images.githubusercontent.com/34945430/160295051-ec4dc5dd-98ac-4eec-8a30-8ff452cca0d1.png)
 
-Then follow this:
+(if it doesn't work) Then follow this:
 
 https://github.com/mahedee/Articles/blob/master/dot-net-core/HowToHostASP.NETCoreWebAPIwithMSSQLServerOnLinuxWithNginxFromScratch.md
 
