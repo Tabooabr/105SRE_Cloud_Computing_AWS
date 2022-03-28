@@ -481,7 +481,7 @@ Inside the product context:
 
 ![image](https://user-images.githubusercontent.com/34945430/160294271-dc4e978b-7400-4e78-9986-42c95673c974.png)
 
-3. Package the Api to Ubuntu with this command: `dotnet publish -c release -r ubuntu.18.04-x64`
+3. Package the Api to Ubuntu (in VS tterminal) with this command: `dotnet publish -c release -r ubuntu.18.04-x64`
 3.1  zip it, paste it into the .ssh folder.
 
 ### Deploying the api: ##
