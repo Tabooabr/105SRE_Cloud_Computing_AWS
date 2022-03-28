@@ -592,4 +592,85 @@ It works by running commands and trying to find local containers in our machine,
 
 Docker was live in 2013, and by 2017 20% of tech companies have containers deployed, and in 2020 50% of organizations have adopted Docker and deployed docker containers.
 
+---
+## Docker Commands: ##
+Docker commands:
 
+`Docker images:` Will present the images available
+
+`Docker ps`: To check the containers running
+
+`Docker ps -a`: To check every container running including hidden files
+
+`Docker pull`: to pull the image from docker hub
+
+`Docker run` : to run the image live directly from dockerhub
+
+`docker exec -it [container id] bash`: to access the running container
+
+`docker stop`: stops a running container
+
+`docker kill`: kills container by stopping execution. stop gives time to shut down gracefully
+
+`docker commit [container id][username/imagename]`: creates new image of an edited container on local system
+
+`docker rm [container id]`:removes container
+
+`docker history [image name]`: to view history
+
+`docker image rm [image name]`: deletes image
+
+Making docker docs available on our localhost 
+
+
+`docker run -d -p 4000:4000 docs/docker.github.io` 
+
+Logging into a running container
+
+`docker exec -it <container-id/name> sh`
+
+Port mapping in our containers with localhost
+
+`docker run -d -p localhost-port:container-port`
+
+Copying files to container
+
+`docker cp <file to copy> <container_id>:path/to/file`
+
+
+Running a container with ghost
+
+`docker run -d -p 2368:2368 ghost` 
+
+Running nginx on port 80
+
+`docker run -d -p 80:80 nginx` 
+
+Replacing nginx default page
+
+`docker cp index.html a4700feaa1c0:/usr/share/nginx/html`
+
+## DockerHub ##
+
+Commit to save changes to image, then push to dockerhub
+
+- docker commit <container_id> the1taboo/repo_name 
+
+docker push brittanyharrison/repo_name
+
+Note:Repository name and local folder name must match
+
+Building a Docker Image
+To build a docker image we need to create a Dockerfile
+
+- build image from official image of nginx
+
+FROM nginx
+
+- copy customised index.html file
+
+COPY `index.html /usr/share/nginx/html`
+
+- maps to port 80 on localhost 
+
+`docker run -d -p 80:80 the1taboo/105_sre_aaron_nginx`
