@@ -682,4 +682,4 @@ Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
 
 - Push commit to repo: `docker push the1taboo/repo_name:tag_name`
 
-- Pull the repo: `docker run -d -p 80:80 the1taboo/repo_nameh:latest`
+- Pull the repo: `docker run -d -p 80:80 the1taboo/repo_name:latest`
