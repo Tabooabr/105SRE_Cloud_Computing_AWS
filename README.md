@@ -592,6 +592,17 @@ It works by running commands and trying to find local containers in our machine,
 
 Docker was live in 2013, and by 2017 20% of tech companies have containers deployed, and in 2020 50% of organizations have adopted Docker and deployed docker containers.
 
+## installing Docker ##
+
+Prerequisites:
+
+- Enable CPU virtualisation in your bios
+- In windows features turn on Hyper-Visor
+- Installation instructions
+
+Download and install docker hub
+Should get messege asking you to install WLS2 (windows linux subsystem)
+Log-in to docker hub
 ---
 ## Docker Commands: ##
 Docker commands:
@@ -656,7 +667,7 @@ Commit to save changes to image, then push to dockerhub
 
 - docker commit <container_id> the1taboo/repo_name 
 
-docker push brittanyharrison/repo_name
+docker push the1taboo/repo_name
 
 Note:Repository name and local folder name must match
 
