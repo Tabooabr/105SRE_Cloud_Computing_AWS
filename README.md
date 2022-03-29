@@ -598,11 +598,12 @@ Prerequisites:
 
 - Enable CPU virtualisation in your bios
 - In windows features turn on Hyper-Visor
-- Installation instructions
 
-Download and install docker hub
-Should get messege asking you to install WLS2 (windows linux subsystem)
-Log-in to docker hub
+Installation instructions:
+
+- Download and install docker hub
+- Should get messege asking you to install WLS2 (windows linux subsystem)
+- Log-in to docker hub
 ---
 ## Docker Commands: ##
 Docker commands:
