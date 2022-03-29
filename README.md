@@ -691,3 +691,37 @@ Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
 - Push commit to repo: `docker push <Docker_id>/<repo_name>:<tag>`
 
 - Pull the repo: `docker run -d -p 80:80 <Docker_id>/<repo_name>:<latest>`
+
+### Docker file to automate the process of building customised image - Building a Microservice with docker
+
+- Crio - Rocket - Docker
+- Automate image building of our customised nginx image
+- create a `Dockerfile` in the same loacation where our index.html is
+- Decide which base image to use for your image
+
+```bash
+
+
+# Select Base image
+
+FROM nginx
+
+# Label it - add optional details
+
+LABEL MAINTAINER=AARON
+
+# copy the data  from localhost to Container
+# copy index.html to ?usr?share?nginx/html/
+
+COPY index.html /usr/share/nginx/html/
+
+# expose the required port - port 80
+
+EXPOSE 80
+
+# launch the app 
+
+CMD ["nginx", "-g", "daemon off;"]
+# CMD will run the command in this case to launch the image when we create a container
+
+```
