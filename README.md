@@ -644,33 +644,33 @@ Docker commands:
 
 `docker image rm [image name]`: deletes image
 
-Making docker docs available on our localhost 
+ - Making docker docs available on our localhost 
 
 
 `docker run -d -p 4000:4000 docs/docker.github.io` 
 
-Logging into a running container
+- Logging into a running container
 
 `docker exec -it <container-id/name> sh`
 
-Port mapping in our containers with localhost
+- Port mapping in our containers with localhost
 
 `docker run -d -p localhost-port:container-port`
 
-Copying files to container
+- Copying files to container
 
 `docker cp <file to copy> <container_id>:path/to/file`
+ (Easier if you git bash from the path of the file you want to copy)
 
-
-Running a container with ghost
+- Running a container with ghost
 
 `docker run -d -p 2368:2368 ghost` 
 
-Running nginx on port 80
+- Running nginx on port 80
 
 `docker run -d -p 80:80 nginx` 
 
-Replacing nginx default page
+- Replacing nginx default page
 
 `docker cp index.html a4700feaa1c0:/usr/share/nginx/html`
 
