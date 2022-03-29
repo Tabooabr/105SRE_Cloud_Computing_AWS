@@ -583,16 +583,15 @@ Docker volumes are directories and files that exist on the host file system outs
 
 VMs Vs Docker: 
 
-docker is very user friendly, starts faster and the size required is small compared to having a VM.
-if you make a VM it will take away 50% of the power of your machine, where as docker would take the resources on demand only.
 
 ![image](https://user-images.githubusercontent.com/34945430/160372106-253a79c1-3fc6-4813-b46e-1068c1c6641e.png)
 
 
 - Why docker? 
 
-- Takes resources from local machine on demand, compared to a vm.
-- Can run images
+- docker is very user friendly, starts faster and the size required is small compared to having a VM.
+if you make a VM it will take away 50% of the power of your machine, where as docker would take the resources on demand only.
+
 
 
 It works by running commands and trying to find local containers in our machine, if it doesnt appear, it will go to the registry (docker hub) to find the container.
