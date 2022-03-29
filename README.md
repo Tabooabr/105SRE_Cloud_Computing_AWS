@@ -732,6 +732,7 @@ Method 1:
 Create a Dockerfile in your project folder.
 Add the text below to your Dockerfile for either Linux or Windows Containers. The tags below are multi-arch meaning they pull either Windows or Linux containers depending on what mode is set in Docker Desktop for Windows. Read more on switching containers.
 The Dockerfile assumes that your application is called aspnetapp. Change the Dockerfile to use the DLL file of your project.
+```bash
 # syntax=docker/dockerfile:1
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
@@ -750,6 +751,7 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
 To make your build context as small as possible add a .dockerignore file to your project folder and copy the following into it.
+```
 ```bash 
 bin/
 obj/
