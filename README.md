@@ -577,9 +577,10 @@ Test any ends:
 
 Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. 
 
-- What are volumes? 
+It works by running commands and trying to find local containers in our machine, if it doesn't appear, it will go to the registry (docker hub) to find the container.
 
-Docker volumes are directories and files that exist on the host file system outside of the Docker container. These volumes are used to persist data and share data between Docker containers. Docker supports the mounting of one or more data volumes from the host OS to the Docker container.
+Docker was live in 2013, and by 2017 20% of tech companies have containers deployed, and in 2020 50% of organizations have adopted Docker and deployed docker containers.
+
 
 ![image](https://user-images.githubusercontent.com/34945430/160572309-77559e28-6512-4a65-b6a3-5bedb403e0ed.png)
 
@@ -598,10 +599,10 @@ if you make a VM it will take away 50% of the power of your machine, where as do
 
 ![image](https://user-images.githubusercontent.com/34945430/160372106-253a79c1-3fc6-4813-b46e-1068c1c6641e.png)
 
-It works by running commands and trying to find local containers in our machine, if it doesnt appear, it will go to the registry (docker hub) to find the container.
 
-Docker was live in 2013, and by 2017 20% of tech companies have containers deployed, and in 2020 50% of organizations have adopted Docker and deployed docker containers.
+- What are volumes? 
 
+Docker volumes are directories and files that exist on the host file system outside of the Docker container. These volumes are used to persist data and share data between Docker containers. Docker supports the mounting of one or more data volumes from the host OS to the Docker container.
 
 
 ## installing Docker ##
