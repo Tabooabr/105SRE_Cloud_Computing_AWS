@@ -674,6 +674,8 @@ Docker commands:
 
 `docker cp index.html a4700feaa1c0:/usr/share/nginx/html`
 
+Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
+
 ## DockerHub ##
 
 - Make a commit: `docker commit container_id the1taboo/repo_name:tag_name`
