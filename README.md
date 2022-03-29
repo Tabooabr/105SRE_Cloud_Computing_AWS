@@ -607,6 +607,8 @@ Docker volumes are directories and files that exist on the host file system outs
 
 ## installing Docker ##
 
+Guide: https://docs.docker.com/desktop/windows/install/
+
 Prerequisites:
 
 - Enable CPU virtualisation in your bios
