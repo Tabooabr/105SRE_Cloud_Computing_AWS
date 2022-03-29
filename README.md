@@ -676,7 +676,7 @@ docker run -d -p 80:80 nginx
 
 # Replacing nginx default page
 
-docker cp index.html a4700feaa1c0:/usr/share/nginx/html
+docker cp index.html imageID:/usr/share/nginx/html
 ```
 
 Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
