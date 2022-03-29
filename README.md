@@ -585,7 +585,7 @@ Docker was live in 2013, and by 2017 20% of tech companies have containers deplo
 ![image](https://user-images.githubusercontent.com/34945430/160572309-77559e28-6512-4a65-b6a3-5bedb403e0ed.png)
 
 
-VMs Vs Docker: 
+Vvirtualisation Vs Docker: 
 
 ![image](https://user-images.githubusercontent.com/34945430/160571936-48be9dd8-99b7-4519-b404-8c599a37881e.png)
 
