@@ -649,32 +649,33 @@ Docker commands:
 
 ```bash
 
-`docker run -d -p 4000:4000 docs/docker.github.io` 
+docker run -d -p 4000:4000 docs/docker.github.io 
 
 # Logging into a running container
 
-`docker exec -it <container-id/name> sh`
+docker exec -it <container-id/name> sh
 
 # Port mapping in our containers with localhost
 
-`docker run -d -p localhost-port:container-port`
+docker run -d -p localhost-port:container-port
 
 # Copying files to container
 
-`docker cp <file to copy> <container_id>:path/to/file`
+docker cp <file to copy> <container_id>:path/to/file
 #(Easier if you git bash from the path of the file you want to copy)
 
 # Running a container with ghost
 
-`docker run -d -p 2368:2368 ghost` 
+docker run -d -p 2368:2368 ghost
 
 # Running nginx on port 80
 
-`docker run -d -p 80:80 nginx` 
+docker run -d -p 80:80 nginx
 
 # Replacing nginx default page
 
-`docker cp index.html a4700feaa1c0:/usr/share/nginx/html`
+docker cp index.html a4700feaa1c0:/usr/share/nginx/html
+```
 
 Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
 
