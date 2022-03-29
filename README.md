@@ -597,6 +597,9 @@ Virtualisation Vs Docker:
 - docker is very user friendly, starts faster and the size required is small compared to having a VM.
 if you make a VM it will take away 50% of the power of your machine, where as docker would take the resources on demand only.
 
+![image](https://user-images.githubusercontent.com/34945430/160584975-55b37858-db63-4988-bbe8-2ab843084c56.png)
+
+
 ![image](https://user-images.githubusercontent.com/34945430/160372106-253a79c1-3fc6-4813-b46e-1068c1c6641e.png)
 
 
