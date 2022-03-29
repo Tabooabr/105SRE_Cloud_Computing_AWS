@@ -688,7 +688,7 @@ Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
 
 - Make a commit: `docker commit container_id <Docker_id>/<repo_name>:<tag>`
 
-- Push commit to repo: `docker push <Docker_id>/<repo_name>:<tag>`
+- Push commit to repo: `docker push <Docker_id>/<repo_name>:<tag>` (Name of image must match name of repo or it wont work).
 
 - Pull the repo: `docker run -d -p 80:80 <Docker_id>/<repo_name>:<latest>`
 
@@ -727,8 +727,8 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 ---
 
-Create a Dockerfile for an ASP.NET Core application
-Method 1:
+## Create a Dockerfile for an ASP.NET Core application
+
 Create a Dockerfile in your project folder.
 Add the text below to your Dockerfile for either Linux or Windows Containers. The tags below are multi-arch meaning they pull either Windows or Linux containers depending on what mode is set in Docker Desktop for Windows. Read more on switching containers.
 The Dockerfile assumes that your application is called aspnetapp. Change the Dockerfile to use the DLL file of your project.
