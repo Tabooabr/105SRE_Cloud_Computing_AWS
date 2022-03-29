@@ -663,7 +663,7 @@ docker run -d -p localhost-port:container-port
 
 # Copying files to container
 
-docker cp <file to copy> <container_id>:path/to/file
+docker cp <file to copy> <container_id>:<path/to/file>
 #(Easier if you git bash from the path of the file you want to copy)
 
 # Running a container with ghost
@@ -676,15 +676,15 @@ docker run -d -p 80:80 nginx
 
 # Replacing nginx default page
 
-docker cp index.html imageID:/usr/share/nginx/html
+docker cp index.html <imageID>:/usr/share/nginx/html
 ```
 
 Docker Cheatsheet: https://dockerlabs.collabnix.com/docker/cheatsheet/
 
 ## DockerHub ##
 
-- Make a commit: `docker commit container_id the1taboo/repo_name:tag_name`
+- Make a commit: `docker commit container_id <Docker_id>/<repo_name>:<tag>`
 
-- Push commit to repo: `docker push the1taboo/repo_name:tag_name`
+- Push commit to repo: `docker push <Docker_id>/<repo_name>:<tag>`
 
-- Pull the repo: `docker run -d -p 80:80 the1taboo/repo_name:latest`
+- Pull the repo: `docker run -d -p 80:80 <Docker_id>/<repo_name>:<latest>`
