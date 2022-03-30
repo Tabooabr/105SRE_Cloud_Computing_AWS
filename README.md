@@ -774,7 +774,7 @@ Kubernetes is a portable, extensible, open-source platform for managing containe
 
 
 ### Kubernetes archutecture: ###
-```bash
+```yml
 Docker Compose (YAML)
 version: '3'
 services:
@@ -860,7 +860,7 @@ https://docs.docker.com/desktop/kubernetes/
 
 ## Kubernetes commands ##
 
-```bash
+```yml
 
 #  services: deployment, service, pods, replicasets, crobjob, autoscalinggroup, horizontal pod scaling group (HPA)
 
