@@ -939,3 +939,7 @@ Other Commands:
 Usage:
   kubectl [flags] [options]
 ```
+## API Using K8: ##
+
+![structure](https://user-images.githubusercontent.com/34945430/160864871-59ada508-4b79-406b-8faf-ba225811dea3.png)
+
