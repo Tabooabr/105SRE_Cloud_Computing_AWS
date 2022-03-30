@@ -761,13 +761,73 @@ obj/
 
 ![image](https://user-images.githubusercontent.com/34945430/160809058-31bb38eb-2331-4f94-b14f-10f8c1d6bf11.png)
 
+
+What is it and why is it used?
+
+- What is Kubernetes and why it is used?
+Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
 - Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 - It groups containers that make up an application into logical units for easy management and discovery.
 
 - Kubernetes builds upon 15 years of experience of running production workloads at Google, combined with best-of-breed ideas and practices from the community.
 
+
+### Kubernetes archutecture: ###
+
+![image](https://user-images.githubusercontent.com/34945430/160810801-fbe795d0-2006-4f4d-9fd3-a4570431af98.png)
+
+![image](https://user-images.githubusercontent.com/34945430/160810874-9c4a2b74-f558-40b5-9a18-1d2ffa448f59.png)
+
+![image](https://user-images.githubusercontent.com/34945430/160811596-0a27cb44-c418-4bcf-88b1-4c1269fe2cc7.png)
+
+
+See further info here: https://kubernetes.io/docs/concepts/architecture/ 
+
+- Cluster Architecture
+- Nodes
+- Control Plane-Node Communication
+- Controllers
+- Cloud Controller Manager
+- Container Runtime Interface (CRI)
+- Garbage Collection
+
+### Kubernetes Service: ###
+
+![image](https://user-images.githubusercontent.com/34945430/160810999-fc9a4ddd-9c40-470b-9edf-3e754dddc181.png)
+
+- What is a service in K8? 
+    - A Kubernetes service is a logical abstraction for a deployed group of pods in a cluster (which all perform the same function). Since pods are ephemeral, a service enables a group of pods, which provide specific functions (web services, image processing, etc.) to be assigned a name and unique IP address (clusterIP).
+
+### K8 Objects: ###
+
+- Kubernetes objects are entities that are used to represent the state of the cluster. An object is a “record of intent” – once created, the cluster does its best to ensure it exists as defined. This is known as the cluster's “desired state.”
+
+
+### K8 Setup ###
+
+Follow this guide for setting up with Docker: 
+
+https://docs.docker.com/desktop/kubernetes/
+
+(Check here: https://kubernetes.io/docs/tasks/tools/)
+
 ## Kubernetes commands ##
+
+```bash
+
+#  services: deployment, service, pods, replicasets, crobjob, autoscalinggroup, horizontal pod scaling group (HPA)
+
+# Kubect get service_name - deployment - pod - rs
+
+# kubectl get deploy nginx_deploy (nginx_svc)
+
+# kubectl get pods 
+
+# kubect describe pod pod_name
+
+```
+
 
 
 Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
