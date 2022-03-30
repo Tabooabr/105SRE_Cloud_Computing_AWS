@@ -774,7 +774,7 @@ Kubernetes is a portable, extensible, open-source platform for managing containe
 
 
 ### Kubernetes archutecture: ###
-```yml
+```docker
 Docker Compose (YAML)
 version: '3'
 services:
@@ -860,7 +860,7 @@ https://docs.docker.com/desktop/kubernetes/
 
 ## Kubernetes commands ##
 
-```yml
+```bash
 
 #  services: deployment, service, pods, replicasets, crobjob, autoscalinggroup, horizontal pod scaling group (HPA)
 
@@ -943,3 +943,75 @@ Usage:
 
 ![structure](https://user-images.githubusercontent.com/34945430/160864871-59ada508-4b79-406b-8faf-ba225811dea3.png)
 
+## Services and Deploy files: ##
+
+Service:
+```yml
+---
+# Select the type of API version and type of service/object
+apiVersion: v1
+kind: Service
+# Metadata for name
+metadata: 
+  name: api-svc
+  namespace: default #
+# Specification to include ports Selector to connect to the deployment
+spec: 
+  ports:
+  - nodePort: 30443 # Range is 30000 - 32768 will have ufw these ports or make SG
+    port: 82 #port for localhost
+    protocol: TCP
+    targetPort: 80
+
+# Let's define the selector and label to connect to nginx deployment
+  selector:
+    app: api
+
+  #Creating LoadBalancer type of deployment
+  type: LoadBalancer
+```
+Deployment yml:
+
+```yml
+# K8 works with API versions to declare the resources
+# We have to declase to apiVersion and the kind of service/component
+# services: deployment, service, pods, replicasets, crobjob, autoscalinggroup, horizontal pod scaling group (HPA)
+# kubectl get service_name - deployment - pod - rs
+# kubectl get deploy nginx_deploy (nginx_svc)
+# kubectl get pods
+# kubectl describe pod pod_name
+
+# YML is case sensitive - indentation of YML is important
+# use spaces not a tab
+apiVersion: apps/v1 # which api to use for deployment
+kind: Deployment # what kind of service/object you want to create
+
+# what would you like to call it - name the service/object
+metadata: 
+  name: nginx-deployment
+
+
+spec: 
+  selector:
+    matchLabels:
+      app: nginx # look for this label to match with k8 service
+
+  # Let's create a replica set of this with 3 instances/pods
+  replicas: 3
+
+  # Template to use it's label for K8 service to launch in the browser
+  template: 
+    metadata:
+      labels: 
+        app: nginx # This label connects to the service or any other K8 components
+    
+    #Let's define the container spec:
+    spec:
+      containers:
+      - name: nginx
+        image: the1taboo/105_sre_aaron_nginx
+        ports:
+        - containerPort: 80
+
+# create a kubernetes nginx-service.yml to create a k8 service
+```
