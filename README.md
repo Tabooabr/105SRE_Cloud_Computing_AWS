@@ -774,10 +774,55 @@ Kubernetes is a portable, extensible, open-source platform for managing containe
 
 
 ### Kubernetes archutecture: ###
+```bash
+Docker Compose (YAML)
+version: '3'
+services:
+  db:
+    image: shakilrahman/mssql-northwind
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Shakil22!"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+  products-api:
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+```
+Before running this make sure Port 80 and Port 1433 are open
+Refactor the code to so connection string contains server = db, 1433 (matches the name in docker-compose.yaml)
+Creates the MSSQL database with Northwind using shakilrahman/mssql-northwind
+Creates the API using the Dockerfile
+Run: docker-compose up
+Two Containers should be created and the API should run on Port 80 (localhost)
+Tutorial: https://www.youtube.com/watch?v=4V7CwC_4oss
 
-![image](https://user-images.githubusercontent.com/34945430/160810801-fbe795d0-2006-4f4d-9fd3-a4570431af98.png)
 
-![image](https://user-images.githubusercontent.com/34945430/160810874-9c4a2b74-f558-40b5-9a18-1d2ffa448f59.png)
+- Developed and run by Google for over 15 years
+- Now owned by the Linux foundation and is open-source
+- Used to Orchestrate the containers and Organise how they connect
+Advantages:
+ - Self Healing: When a pod crashes another is spun up automatically
+ - Load Balancing: When a pod crashes the load balancer redirects the traffic to another pod
+ - Auto Scaling: Allows you to create more pods when required
+ - Automated rollouts and rollback: When an image is not working it can rollback to a working version
+ - Each pod (smallest item in K8) has its own IP address
+- If a pod crashes then the controller-manager will delete the pod and then creates a replica
+Load balancer will redirect the traffic to another pod (Scheduler)
+
+## Kubernetes Diagram: ##
+Diagram
+
+![image](https://user-images.githubusercontent.com/34945430/160861679-2c35585b-89df-4881-978e-f39ba84a4ea3.png)
+
+Best Practice
+Start with a small team, test, learn and move on
+Use Docker to contrainerise your apps for fast and constant delivery
+Orchestration with K8 to make your life easier
 
 ![image](https://user-images.githubusercontent.com/34945430/160811596-0a27cb44-c418-4bcf-88b1-4c1269fe2cc7.png)
 
@@ -802,6 +847,7 @@ See further info here: https://kubernetes.io/docs/concepts/architecture/
 ### K8 Objects: ###
 
 - Kubernetes objects are entities that are used to represent the state of the cluster. An object is a “record of intent” – once created, the cluster does its best to ensure it exists as defined. This is known as the cluster's “desired state.”
+
 
 
 ### K8 Setup ###
