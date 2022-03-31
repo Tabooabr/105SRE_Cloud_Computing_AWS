@@ -1014,3 +1014,77 @@ spec:
 
 # create a kubernetes nginx-service.yml to create a k8 service
 ```
+
+
+## Deploy an api in a cluster: ##
+
+1. Install docker.io 
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt install docker.io -y
+```
+2. Install KubeCTL:
+
+```bash
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+#then 
+
+chmod +x ./kubectl
+
+#then
+
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+```
+3. install minikube:
+
+```bash
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
+
+#then 
+
+chmod +x minikube 
+
+#then
+
+ sudo mv minikube /usr/local/bin/
+```
+4. SCP your YML Services and deploy files into the Ec2 Instance
+
+```bash
+ scp -i ~/.ssh/105.pem api-test-deploy.yml ubuntu@ec2-54-xx-xxx-xxx.eu-west-1.compute.amazonaws.com`
+```
+
+5. Check Minikube Version
+
+```bash 
+minikube version
+```
+
+6. Install conntrack 
+
+```bash 
+$ sudo apt install conntrack
+```
+
+7. Running Minikube on EC2 Ubuntu
+Become a root user.
+
+```bash
+sudo -i
+```
+
+8. Run the containers:
+
+```bash
+`kubectl create -f api-test-deploy.yml`
+
+# Then (it is very important to run the deploy before service)
+
+`kubectl create -f api-test-service.yml`
+```
+
+9. Get the public ip, and select the node port:
+
