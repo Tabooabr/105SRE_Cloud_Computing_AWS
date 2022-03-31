@@ -1096,14 +1096,23 @@ https://www.radishlogic.com/kubernetes/running-minikube-in-aws-ec2-ubuntu/
 ---
 
 ## Microsoft SQL Server with Northwind: ###
+
 Create docker container with MSSQL
+
 `docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04`
+
 Open Microsoft SQL Server Management Studio
+
 Connect using SQL Server Authentication
+
 Server Name: localhost, 1433
+
 Login: sa
+
 Password: 1password4all!
+
 Create New Query and Install Northwind database
+
 Create an image of your MSSQL Server with Northwind
 
 `docker commit containerID the1aboo/mssql-northwind`
