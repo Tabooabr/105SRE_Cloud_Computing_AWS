@@ -1089,3 +1089,6 @@ sudo -i
 9. Get the public ip, and select the node port:
 
 ![image](https://user-images.githubusercontent.com/34945430/161100379-8167d467-aebd-4a26-8758-74c1f642aa65.png)
+
+Original guides: https://aws.plainenglish.io/running-kubernetes-using-minikube-cluster-on-the-aws-cloud-4259df916a07
+https://www.radishlogic.com/kubernetes/running-minikube-in-aws-ec2-ubuntu/
