@@ -1014,3 +1014,6 @@ spec:
 
 # create a kubernetes nginx-service.yml to create a k8 service
 ```
+
+--- 
+Magic link: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose
