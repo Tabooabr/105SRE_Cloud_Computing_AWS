@@ -756,33 +756,17 @@ To make your build context as small as possible add a .dockerignore file to your
 bin/
 obj/
 ```
----
-# Kubernetes #
 
-![image](https://user-images.githubusercontent.com/34945430/160809058-31bb38eb-2331-4f94-b14f-10f8c1d6bf11.png)
-
-
-What is it and why is it used?
-
-- What is Kubernetes and why it is used?
-Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
-- Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
-
-- It groups containers that make up an application into logical units for easy management and discovery.
-
-- Kubernetes builds upon 15 years of experience of running production workloads at Google, combined with best-of-breed ideas and practices from the community.
-
-
-### Kubernetes archutecture: ###
+### Docker Compose: ###
 ```docker
 Docker Compose (YAML)
 version: '3'
 services:
   db:
-    image: shakilrahman/mssql-northwind
+    image: the1taboo/mssql-northwind
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: "Shakil22!"
+      SA_PASSWORD: "1password4all!"
       MSSQL_PID: Express
     ports:
       - "1433:1433"
@@ -801,6 +785,21 @@ Run: docker-compose up
 Two Containers should be created and the API should run on Port 80 (localhost)
 Tutorial: https://www.youtube.com/watch?v=4V7CwC_4oss
 
+---
+# Kubernetes #
+
+![image](https://user-images.githubusercontent.com/34945430/160809058-31bb38eb-2331-4f94-b14f-10f8c1d6bf11.png)
+
+
+What is it and why is it used?
+
+- What is Kubernetes and why it is used?
+Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
+- Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+
+- It groups containers that make up an application into logical units for easy management and discovery.
+
+- Kubernetes builds upon 15 years of experience of running production workloads at Google, combined with best-of-breed ideas and practices from the community.
 
 - Developed and run by Google for over 15 years
 - Now owned by the Linux foundation and is open-source
