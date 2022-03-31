@@ -1017,3 +1017,5 @@ spec:
 
 --- 
 Magic link: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose
+
+Magic link 2 deployment: https://www.radishlogic.com/kubernetes/running-minikube-in-aws-ec2-ubuntu/
