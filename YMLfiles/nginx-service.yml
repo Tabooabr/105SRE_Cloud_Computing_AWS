@@ -1,0 +1,22 @@
+---
+# Select the type of API version and type of service/object
+apiVersion: v1
+kind: Service
+# Metadata for name
+metadata: 
+  name: api-svc
+  namespace: default #
+# Specification to include ports Selector to connect to the deployment
+spec: 
+  ports:
+  - nodePort: 30443 # Range is 30000 - 32768 will have ufw these ports or make SG
+    port: 80 #port for localhost
+    protocol: TCP
+    targetPort: 82
+
+# Let's define the selector and label to connect to nginx deployment
+  selector:
+    app: api
+
+  #Creating LoadBalancer type of deployment
+  type: LoadBalancer
