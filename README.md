@@ -1,13 +1,68 @@
 ﻿# 105SRE_Cloud_Computing_AWS #
 
 ## Added Readme ##
+
 ### SRE ###
 #### Journey ####
 
-- This is a bullet point
-
-- use nano to use CLI text editor
----
+- [105SRE_Cloud_Computing_AWS](#105sre_cloud_computing_aws)
+  - [Added Readme](#added-readme)
+    - [SRE](#sre)
+      - [Journey](#journey)
+    - [Intro to AWS And Cloud Computing:](#intro-to-aws-and-cloud-computing)
+  - [Why are some businessess going cloud ?](#why-are-some-businessess-going-cloud-)
+    - [Benefits of cloud computing:](#benefits-of-cloud-computing)
+    - [Characteristics](#characteristics)
+    - [Diversion of traffic](#diversion-of-traffic)
+  - [Q Regarding Today](#q-regarding-today)
+  - [AWS Diagram:](#aws-diagram)
+    - [How to connect to remote VM:](#how-to-connect-to-remote-vm)
+  - [(some steps may need clarification)](#some-steps-may-need-clarification)
+    - [Inside the VM](#inside-the-vm)
+    - [File Permisions:](#file-permisions)
+    - [Bash Scripting - Automate process with the script](#bash-scripting---automate-process-with-the-script)
+  - [tomcat script:](#tomcat-script)
+  - [Questions and R+D](#questions-and-rd)
+    - [- What is a VPC](#--what-is-a-vpc)
+    - [- What is an Internet Gateway](#--what-is-an-internet-gateway)
+    - [- What is Route Tables](#--what-is-route-tables)
+    - [- What is a subnet](#--what-is-a-subnet)
+    - [- What is NACLS](#--what-is-nacls)
+    - [- What is a Security Group](#--what-is-a-security-group)
+    - [- How did you secure your app on the public cloud](#--how-did-you-secure-your-app-on-the-public-cloud)
+    - [- What are the outbound rules for security group by default and why?](#--what-are-the-outbound-rules-for-security-group-by-default-and-why)
+    - [- What is the command to kill a process in Linux?](#--what-is-the-command-to-kill-a-process-in-linux)
+    - [Monolith - N-tier - 2-tier & Microservices Architecture](#monolith---n-tier---2-tier--microservices-architecture)
+      - [Monolith](#monolith)
+      - [N-tier](#n-tier)
+      - [2-tier](#2-tier)
+      - [Microservices Architecture](#microservices-architecture)
+      - [Scaling up and scaling out?](#scaling-up-and-scaling-out)
+      - [AWS CLI](#aws-cli)
+- [Following this tutorial to setup northwind in a db](#following-this-tutorial-to-setup-northwind-in-a-db)
+  - [This Diagram summarizes the end result:](#this-diagram-summarizes-the-end-result)
+    - [Deploying the api:](#deploying-the-api)
+  - [To test connection](#to-test-connection)
+  - [Port Forwarding](#port-forwarding)
+  - [Now that it is working:](#now-that-it-is-working)
+- [Docker](#docker)
+  - [installing Docker](#installing-docker)
+  - [- Log-in to docker hub](#--log-in-to-docker-hub)
+  - [Docker Commands:](#docker-commands)
+  - [DockerHub](#dockerhub)
+    - [Docker file to automate the process of building customised image - Building a Microservice with docker](#docker-file-to-automate-the-process-of-building-customised-image---building-a-microservice-with-docker)
+  - [Create a Dockerfile for an ASP.NET Core application](#create-a-dockerfile-for-an-aspnet-core-application)
+    - [Docker Compose:](#docker-compose)
+- [Kubernetes](#kubernetes)
+  - [Kubernetes Diagram:](#kubernetes-diagram)
+    - [Kubernetes Service:](#kubernetes-service)
+    - [K8 Objects:](#k8-objects)
+    - [K8 Setup](#k8-setup)
+  - [Kubernetes commands](#kubernetes-commands)
+  - [API Using K8:](#api-using-k8)
+  - [Services and Deploy files:](#services-and-deploy-files)
+  - [Deploy an api in a cluster:](#deploy-an-api-in-a-cluster)
+  - [The other side of the business and challenges that we have encountered:](#the-other-side-of-the-business-and-challenges-that-we-have-encountered)
 
 ### Intro to AWS And Cloud Computing: ##
 
@@ -1088,3 +1143,24 @@ sudo -i
 
 9. Get the public ip, and select the node port:
 
+## The other side of the business and challenges that we have encountered: ##
+
+- Notes
+- Using Microsoft Technologies they had issues developing their tech in docker.
+- size of containers is big and deployment slow, suggested to use multi stage-deployment.
+- AKS manage service on Azure
+- Lightweight, so much better than VMs
+- The less technicall people are not that involved in the technical side
+- Contanerization and Orchestration (autoscaling, self healing, replica sets, pods) (It's hard to explain apparently)
+
+invest in the technologies that the business is using, develop yourself and add value to the business, for example by doing certifications, 
+real life examples and professionals.
+
+Upskill in one area and reskill later on.
+
+In 5 years time if playing the cards right, you could earn 50k.
+Working alone will not make you stand out, but you need to seek to develop yourself 
+
+C#, ASP.NET, Docker and Kube -- Microsoft 
+
+Be positive.
